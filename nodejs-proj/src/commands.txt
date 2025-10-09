@@ -1,0 +1,40 @@
+  353  cd src
+  354  ls
+  355  nodejs
+  356  search nodejs
+  357  clear
+  358  ls
+  359  cd ..
+  360  ls
+  361  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+  362  export NVM_DIR="$HOME/.nvm"
+  363  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  364  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  365  \. "$HOME/.nvm/nvm.sh"
+  366  nvm install 22
+  367  node -v
+  368  npm -v
+  369  clear
+  370  ls
+  371  ls -ltra
+  372  clear
+  373  cd src
+  374  ls
+  375  npm install
+  376  npm start
+  377  jobs
+  378  pgrep nodejs
+  379  pgrep node
+  380  jobs
+  381  clear
+  382  cd
+  383  ls
+  384  cd monitoring-proj/
+  385  ls
+  386  cd nodejs-proj
+  387  ls
+  388  cd src
+  389  ls
+  390  history
+  391  history | tail -40
+  392  history | tail -40 >> commands.txt
