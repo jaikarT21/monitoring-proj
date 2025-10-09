@@ -1,0 +1,14 @@
+  486  sudo apt update && sudo apt upgrade -y
+  487  sudo apt install python3 python3-pip python3-venv -y
+       cd python-proj/
+          
+  503  python3 -m venv venv
+  528  source  venv/bin/activate 
+       
+       (venv) 
+       pip install -r reqyuiremnts.txt
+        
+  529  python3 run.py
+       deactivate
+
+
