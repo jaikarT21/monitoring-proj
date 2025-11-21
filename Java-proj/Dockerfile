@@ -1,0 +1,29 @@
+# Use the OpenJDK 21 Alpine base image
+#STAGE-1
+ 
+FROM eclipse-temurin:17-jdk-alpine AS build 
+
+WORKDIR /app
+
+COPY . .
+
+RUN apk update && apk add maven
+
+RUN mvn package 
+
+
+#STAGE-2
+# Use the OpenJDK 21 Alpine base image
+FROM eclipse-temurin:17-jdk-alpine
+
+
+WORKDIR /app
+
+COPY --from=build /app/target/*.jar  app.jar
+
+EXPOSE 8080
+
+
+CMD ["java" , "-jar" , "app.jar"]
+
+
